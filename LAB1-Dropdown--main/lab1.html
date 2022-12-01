@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab1 Dropdown</title>
+  <style>
+    header h1 {
+      text-align: right;
+      font-weight: bold;
+      background-color: red;
+      width: 100%;
+      height: 40%;
+      float: right;
+      margin: 0%;
+      padding: 0%;
+    }
+
+    body {
+      margin: 0%;
+      height: auto;
+    }
+
+    .Menu {
+      margin: 0%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .Menu li {
+      display: inline-block;
+      padding: 10px;
+    }
+
+    .Menu li a {
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+    }
+
+    .dropdown li {
+      display: block;
+    }
+
+    .Menu li:nth-child(2):hover #dropdown1,
+    .Menu li:nth-child(3):hover #dropdown2 {
+      display: block;
+    }
+
+    .Menu li:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    #dropdown1,
+    #dropdown2 {
+      position: absolute;
+      width: auto;
+      display: none;
+      max-width: 150px;
+      top: 42.5px;
+      background-color: greenyellow;
+      padding: 0%;
+    }
+
+    #dropdown1 li,
+    #dropdown2 li {
+      display: block;
+    }
+
+    #dropdown1 li a,
+    #dropdown2 li a {
+      color: blue;
+    }
+
+    #dropdown1 li a li:hover,
+    #dropdown2 li a li:hover {
+      background-color: goldenrod;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Demo of Dropdown</h1>
+  </header>
+  <nav>
+    <ul class="Menu">
+      <li><a href="#">Link 1</a></li>
+      <li>
+        <a href="#">Link 2</a>
+        <ul id="dropdown1">
+          <li><a href="#">DD_Link 1</a></li>
+          <li><a href="#">DD_Link 2</a></li>
+          <li><a href="#">DD_Link 3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Link 3</a>
+        <ul id="dropdown2">
+          <li><a href="#">EE_Link 1</a></li>
+          <li><a href="#">EE_Link 2</a></li>
+          <li><a href="#">EE_Link 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>
